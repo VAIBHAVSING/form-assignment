@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx nodemon src/index.ts",
     "build": "tsc -- init",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "seed": "npx ts-node src/DB-generator.ts"
   },
   "author": "",
   "license": "ISC",
