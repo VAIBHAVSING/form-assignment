@@ -34,8 +34,8 @@ Ensure you have the following installed on your local machine:
 First, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/dynamic-forms-app.git
-cd dynamic-forms-app
+git clone https://github.com/VAIBHAVSING/form-assignment.git
+cd form-assignment
 ```
 
 ### 2. Install Dependencies
