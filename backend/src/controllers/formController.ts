@@ -9,6 +9,9 @@ export const submitForm = async (req: Request, res: Response) => {
         res.status(400).json({ error: 'All fields are required' });
     }
     const response=submitFormSchema.safeParse({ formType, name, countryCode, phoneNumber });
+    if(!response.success){
+        res.status(400).json({ error: response.error });
+    }
     try {
         const result = await pool.query(
             'INSERT INTO forms (form_type, name, country_code, phone_number) VALUES ($1, $2, $3, $4) RETURNING *',

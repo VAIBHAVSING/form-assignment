@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 export const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  idleTimeoutMillis: 300000, // 30 seconds before an idle client is closed
+  connectionTimeoutMillis: 2000, // 2 seconds maximum wait for connection
 });
 
 pool.on('connect', () => {
